@@ -78,6 +78,7 @@ img {
 }
 
 .nav-link {
+  position: relative;
   display: block;
   padding: 24px 0;
   font-weight: 500;
@@ -88,14 +89,10 @@ img {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.nav-link.current {
-  position: relative;
-}
-
-.nav-link.current::after {
+/* underline */
+.nav-link::after {
   content: '';
-
+  opacity: 0;
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -103,6 +100,12 @@ img {
   height: 4px;
   background-color: #404bbf;
   border-radius: 2px;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.current:after {
+  opacity: 1;
 }
 
 .contacts {
@@ -279,6 +282,34 @@ button:focus {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+}
+
+.section-three-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-list-icon {
+  fill: #f4f4fd;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+.social-list-item {
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.social-list {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
 }
 
 /* Section-four */

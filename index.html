@@ -408,5 +408,50 @@
         </div>
       </div>
     </footer>
+    <!----------------Modal window----------------->
+    <div class="modal-backdrop is-open">
+      <div class="modal">
+        <button class="modal-close-button" type="button">
+          <svg class="modal-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close" viewBox="0 0 32 32">"></use>
+          </svg>
+        </button>
+        <p class="modal-par">Leave your contacts and we will call you back</p>
+
+        <form class="review-form">
+          <div class="form-name">
+            <label class="form-label" for="user-name">Name</label>
+            <input class="form-input" id="user-name" name="user-name" type="text" required />
+          </div>
+          <div class="form-name">
+            <label class="form-label" for="user-phone">Phone</label>
+            <input class="form-input" id="user-phone" name="user-phone" type="text" />
+          </div>
+          <div class="form-name">
+            <label class="form-label" for="user-mail">Email</label>
+            <input class="form-input" id="user-mail" name="user-mail" type="text" required />
+          </div>
+
+          <div class="form-name">
+            <label class="form-label" for="user-comment"> Comment </label>
+            <textarea
+              class="form-comments"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+              required
+            ></textarea>
+          </div>
+          <div class="form-checkbox">
+            <input class="checkbox-input" name="Privacy Policy" value="true" type="checkbox" />
+            <label class="checkbox-label" for="">
+              I accept the terms and conditions of the
+              <a href="" class="checkbox-link"></a> Privacy Policy
+            </label>
+          </div>
+          <button class="form-button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

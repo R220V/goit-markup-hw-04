@@ -429,7 +429,7 @@ button:focus {
   align-items: baseline;
 }
 
-.container .footer-div {
+.footer-div {
   margin-right: 120px;
 }
 
@@ -487,6 +487,76 @@ button:focus {
   fill: #f4f4fd;
 }
 
+.social-container {
+  margin-right: 80px;
+}
+
+/* ---------form footer------------ */
+
+.footer-form-p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.form-class {
+  display: flex;
+  gap: 24px;
+}
+
+.input-class {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.input-class::placeholder {
+  color: #ffffff;
+}
+
+.button-class {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-class:hover {
+  background-color: #31d0aa;
+}
+
+.button-class:focus {
+  background-color: #31d0aa;
+}
+
+.icon-class {
+  margin-left: 16px;
+}
+
 /*----------------Modal window------------ */
 .modal-backdrop {
   position: fixed;
@@ -499,25 +569,21 @@ button:focus {
   height: 100%;
   z-index: 999999;
   background-color: rgba(46, 47, 66, 0.4);
-}
-/* opacity: 0;
-  visibility: hidden;
+  opacity: 0;
   pointer-events: none;
-  transition: 
-  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-backdrop.is-open {
   opacity: 1;
-  visibility: visible;
   pointer-events: auto;
-} */
+  transition: opacity 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
 
 .modal {
   position: relative;
   width: 408px;
   height: 80%;
-  overflow: auto;
+  /* overflow: auto; */
   padding: 72px 24px 24px 24px;
   max-height: 584px;
   border-radius: 4px;
@@ -569,7 +635,7 @@ button:focus {
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
-.form-div-name {
+.form-div-input {
   position: relative;
   margin-bottom: 8px;
 }
@@ -599,4 +665,85 @@ button:focus {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+}
+
+.form-comments {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  margin-bottom: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comments:focus {
+  border-color: #4d5ae5;
+}
+
+.checkbox-icon {
+  height: 16px;
+  width: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
+}
+
+.checkbox-input:checked + .checkbox-label > .checkbox-icon {
+  background-color: #404bbf;
+}
+
+.checkbox-input:focus + .checkbox-label > .checkbox-icon {
+  border-radius: 2px;
+  border: 1px solid #404bbf;
+}
+.checkbox-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  cursor: pointer;
+}
+
+.checkbox-link {
+  text-decoration: underline;
+}
+.form-checkbox {
+  margin-bottom: 24px;
+}
+
+.form-button {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-button:hover {
+  background-color: #3a4cbf;
 }
